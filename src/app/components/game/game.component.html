@@ -4,6 +4,7 @@
     <button class="homeBtn" *ngIf="!chooseXOPage" (click)="homeBtnClick()">Home</button>
     <div class="container">
       <h1>Tic Tac Toe</h1>
+      <app-score-display [userPlayerPoint]="userPoint" [computerPlayerPoint]="computerPoint"></app-score-display>
       <p *ngIf="winner">Winner : {{ winner }}</p>
       <p *ngIf="isDraw">Match Drawn!</p>
       <div class="board"

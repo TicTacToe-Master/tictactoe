@@ -17,6 +17,9 @@ export class GameComponent implements OnInit{
   chooseXOPage: boolean = true;
   isDraw: boolean = false;
 
+  computerPoint: number = 0;
+  userPoint: number = 0;
+
   ngOnInit(): void {
     this.initializeBoard();
   }
@@ -52,6 +55,7 @@ export class GameComponent implements OnInit{
 
       if (this.checkWinner()) {
         this.winner = this.userPlayer;
+        this.userPoint += 1;
       } else if (this.isBoardFull()) {
         this.handleDraw();
       } else {
@@ -85,6 +89,7 @@ export class GameComponent implements OnInit{
 
     if (this.checkWinner()) {
       this.winner = this.computerPlayer;
+      this.computerPoint += 1;
     } else if (this.isBoardFull()) {
       this.handleDraw();
     }
