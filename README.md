@@ -2,26 +2,38 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Before you can build and test the application, ensure you have the following installed:
 
-## Code scaffolding
+* Node.js 
+* npm 
+* Angular CLI (global installation): `npm install -g @angular/cli`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
 
-## Build
+* Clone the Repository
+`git clone <repository-url>`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Go to the repository folder
+`cd <repository-directory>`
 
-## Running unit tests
+* Install Dependencies
+`npm install`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Running the Application Locally
 
-## Running end-to-end tests
+To serve the application locally and test it in a browser:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* Run the following command : ` ng serve`
 
-## Further help
+* Open your browser and navigate to : ` http://localhost:4200`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   
+## Play the Game
+
+* Start by choosing whether you want to play with the X or O       symbol, then press the Start button.
+
+* Place your symbol on the board. (Note: You cant make a move while the computer is playing.)
+
+* When the game is finished, you can click on Restart to play again or click on the Home button to change your settings.
