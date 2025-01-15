@@ -1,0 +1,105 @@
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Conteneur principal avec le cadre */
+.container {
+  background: #f7f9fc;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+/* Conteneur des boutons X et O */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+
+button {
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton X */
+.cell.X {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.cell.X:hover {
+  transform: scale(1.1);
+  background-color: #e05656;
+}
+
+/* Bouton O */
+.cell.O {
+  background-color: #4dabf7;
+  color: #fff;
+}
+
+.cell.O:hover {
+  transform: scale(1.1);
+  background-color: #3b97e0;
+}
+
+/* Style pour le bouton Play */
+button[type="button"] {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #6c757d;
+  color: #fff;
+}
+
+button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+/* Style pour le message d'erreur */
+.error {
+  color: #e74c3c;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Responsive Design  */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    max-width: 400px;
+    padding: 0.6rem;
+    margin-top: 0.5rem;
+    height: auto;
+  }
+
+  .choices {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+  }
+}
