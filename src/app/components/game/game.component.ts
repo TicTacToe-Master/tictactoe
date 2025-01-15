@@ -21,6 +21,19 @@ export class GameComponent implements OnInit{
     this.initializeBoard();
   }
 
+  getBoardSizeCss() {
+    return `repeat(${this.boardSize}, 1fr)`;
+  }
+
+  getBoardWidth(){
+    if(this.boardSize == 3){
+      return '400px';
+    }else if (this.boardSize == 4){
+      return '600px';
+    }
+    return 'auto';
+  }
+
   // Initialize the board array
   initializeBoard(): void {
     this.board = [];
@@ -92,12 +105,12 @@ export class GameComponent implements OnInit{
       }
     }
 
-    // Check main diagonal
+    // Check main diagonal (from the top)
     if (this.board.every((row, index) => row[index] && row[index] === this.board[0][0])) {
       return true;
     }
 
-    // Check secondary diagonal
+    // Check secondary diagonal (from the bottom)
     if (this.board.every((row, index) => row[this.boardSize - index - 1] && row[this.boardSize - index - 1] === this.board[0][this.boardSize - 1])) {
       return true;
     }
@@ -138,6 +151,13 @@ export class GameComponent implements OnInit{
   // X or O from choose-XO Component
   getUserChoice($event: string): void {
     this.asignPlayer($event);
+  }
+
+  homeBtnClick() {
+    this.resetGame();
+    this.userPlayer = null;
+    this.computerPlayer = null;
+    this.chooseXOPage = true;
   }
 
 }
