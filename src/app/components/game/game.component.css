@@ -1,0 +1,162 @@
+ body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Parent container */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+}
+
+/* Inner container */
+.container {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.homeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.homeBtn:hover {
+  background-color: #0056b3;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: #60d8c2;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Style of X and O boxes */
+.cell.X {
+  background-color: #ff6b6b;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.cell.O {
+  background-color: #4dabf7;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Board grid */
+.board {
+  display: grid;
+  gap: 15px;
+  margin: 1.5rem auto;
+  justify-items: center;
+}
+
+
+.cell {
+  width: 120px;
+  height: 120px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  background: #f4f4f4;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cell {
+    width: 25vw;
+    height: 25vw;
+    font-size: 1.8rem;
+  }
+
+  button {
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .homeBtn{
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .cell {
+    width: 20vw;
+    height: 20vw;
+    font-size: 1.4rem;
+  }
+
+  button {
+    padding: 0.6rem 1rem;
+  }
+}

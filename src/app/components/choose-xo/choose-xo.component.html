@@ -1,1 +1,19 @@
-<p>choose-xo works!</p>
+<div class="container">
+  <h1>Tic Tac Toe</h1>
+  <h2>Choose X or O and start playing now!</h2>
+
+  <p *ngIf="choiceXO">
+    You play with : {{choiceXO}}
+  </p>
+
+  <div class="choices">
+    <button class="cell X" type="button" (click)="selectedChoice('X')">X</button>
+    <button class="cell O" type="button" (click)="selectedChoice('O')">O</button>
+  </div>
+
+  <p *ngIf="errorChoiceEmpty" class="error">
+    Make a choice to start the game, please.
+  </p>
+
+  <button type="button" (click)="sendUserChoise()">Play</button>
+</div>
