@@ -1,1 +1,25 @@
-<p>game works!</p>
+<div class="page-container">
+  <app-choose-xo *ngIf="chooseXOPage" (userChoice)="getUserChoice($event)"></app-choose-xo>
+  <div *ngIf="!chooseXOPage" class="game">
+    <button class="homeBtn" *ngIf="!chooseXOPage" (click)="homeBtnClick()">Home</button>
+    <div class="container">
+      <h1>Tic Tac Toe</h1>
+      <p *ngIf="winner">Winner : {{ winner }}</p>
+      <p *ngIf="isDraw">Match Drawn!</p>
+      <div class="board"
+        [ngStyle]="{
+            'grid-template-columns': getBoardSizeCss(),
+            'max-width': getBoardWidth()
+        }">
+        <div *ngFor="let row of board; let rowIndex = index" class="row">
+          <button *ngFor="let cell of row; let colIndex = index"
+            class="cell {{ cell }}"
+            (click)="play(rowIndex, colIndex)">
+            {{ cell }}
+          </button>
+        </div>
+      </div>
+      <button *ngIf="winner || isDraw" (click)="resetGame()">Restart</button>
+    </div>
+  </div>
+</div>
