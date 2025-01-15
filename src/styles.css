@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+body {
+  background-color: #120C3A ;
+}
+
+.logo-easi {
+  display: block;
+  margin: 0 auto;
+  max-width: 10%;
+  max-height: 10%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .logo-easi {
+    max-width: 20%;
+    max-height: 20%;
+    margin-bottom: 1rem;
+  }
+}
