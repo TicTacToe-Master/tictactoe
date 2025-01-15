@@ -24,10 +24,12 @@ export class GameComponent implements OnInit{
     this.initializeBoard();
   }
 
+  // Css
   getBoardSizeCss() {
     return `repeat(${this.boardSize}, 1fr)`;
   }
 
+  // Css
   getBoardWidth(){
     if(this.boardSize == 3){
       return '400px';
@@ -58,18 +60,16 @@ export class GameComponent implements OnInit{
         this.userPoint += 1;
       } else if (this.isBoardFull()) {
         this.handleDraw();
-      } else {
-        if (this.computerPlayer && !this.winner) {
+      } else if (this.computerPlayer && !this.winner) {
           this.isComputerPlaying = true;
           await this.sleep(1000);
           this.computerPlacement();
           this.isComputerPlaying = false;
         }
-      }
     }
   }
 
-  // Put a X or a O at and random position on the board
+  // Put a X or a O at a random position on the board
   computerPlacement() {
     let rowRandomNumber: number;
     let colRandomNumber: number;
@@ -145,7 +145,7 @@ export class GameComponent implements OnInit{
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-  asignPlayer(playerValue: string): void {
+  assignPlayer(playerValue: string): void {
     if (playerValue === "X" || playerValue === "O") {
       this.userPlayer = playerValue;
       this.computerPlayer = playerValue === "X" ? "O" : "X";
@@ -155,13 +155,15 @@ export class GameComponent implements OnInit{
 
   // X or O from choose-XO Component
   getUserChoice($event: string): void {
-    this.asignPlayer($event);
+    this.assignPlayer($event);
   }
 
   homeBtnClick() {
     this.resetGame();
     this.userPlayer = null;
     this.computerPlayer = null;
+    this.userPoint = 0;
+    this.computerPoint = 0;
     this.chooseXOPage = true;
   }
 

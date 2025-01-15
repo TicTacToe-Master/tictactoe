@@ -1,4 +1,3 @@
- /* Style global */
  body, html {
   margin: 0;
   padding: 0;
@@ -11,7 +10,7 @@
   align-items: center;
 }
 
-/* Conteneur parent */
+/* Parent container */
 .page-container {
   display: flex;
   justify-content: center;
@@ -20,7 +19,7 @@
   width: 100%;
 }
 
-/* Conteneur interne */
+/* Inner container */
 .container {
   background: #ffffff;
   padding: 1rem;
@@ -48,7 +47,7 @@ p {
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 1000; /* Assurez-vous que le bouton reste visible */
+  z-index: 1000;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -81,7 +80,7 @@ button:focus {
   outline: none;
 }
 
-/* Style des cases X et O */
+/* Style of X and O boxes */
 .cell.X {
   background-color: #ff6b6b;
   color: #fff;
@@ -94,7 +93,7 @@ button:focus {
   transform: scale(1.05);
 }
 
-/* Grille de jeu */
+/* Board grid */
 .board {
   display: grid;
   gap: 15px;
