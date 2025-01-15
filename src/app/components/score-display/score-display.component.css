@@ -15,7 +15,6 @@
   margin-bottom: 0.5rem;
 }
 
-/* Conteneur des scores */
 .scores {
   display: flex;
   justify-content: space-between;
@@ -23,7 +22,7 @@
   padding: 0.5rem 0;
 }
 
-/* Carte de score individuelle */
+/* Score card */
 .player-score {
   background: #f9f9f9;
   border: 1px solid #ccc;
@@ -41,7 +40,7 @@
   margin-bottom: 0.2rem;
 }
 
-/* Valeur du score */
+/* Score value */
 .player-score p {
   font-size: 1.2rem;
   font-weight: bold;

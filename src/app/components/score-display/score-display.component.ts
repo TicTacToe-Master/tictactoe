@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./score-display.component.css']
 })
 export class ScoreDisplayComponent {
-  @Input() userPlayerPoint: number=0; // Score du joueur
-  @Input() computerPlayerPoint: number =0; // Score de l'ordinateur
+  @Input() userPlayerPoint: number=0; // Player score
+  @Input() computerPlayerPoint: number =0; // Computer score
 }

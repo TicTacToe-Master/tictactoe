@@ -3,7 +3,7 @@ h1, h2 {
   color: #333;
 }
 
-/* Conteneur principal avec le cadre */
+/* Frame */
 .container {
   background: #f7f9fc;
   padding: 2rem;
@@ -15,7 +15,7 @@ h1, h2 {
   margin: 1.5rem auto;
 }
 
-/* Conteneur des boutons X et O */
+/* X and O frame */
 .choices {
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Bouton X */
+/* X button*/
 .cell.X {
   background-color: #ff6b6b;
   color: #fff;
@@ -46,7 +46,7 @@ button {
   background-color: #e05656;
 }
 
-/* Bouton O */
+/* O button */
 .cell.O {
   background-color: #4dabf7;
   color: #fff;
@@ -57,7 +57,7 @@ button {
   background-color: #3b97e0;
 }
 
-/* Style pour le bouton Play */
+/* Play button */
 button[type="button"] {
   font-size: 1rem;
   padding: 0.8rem 1.5rem;
@@ -74,7 +74,6 @@ button[type="button"]:hover {
   background-color: #5a6268;
 }
 
-/* Style pour le message d'erreur */
 .error {
   color: #e74c3c;
   font-size: 1rem;
